@@ -1,2 +1,2 @@
 # pickyourpoison
-API for creating coffee orders
+An API for creating your favorite coffee orders
