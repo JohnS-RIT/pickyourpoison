@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Your Poison</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ephesis&family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script src="bundle.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Pick Your Poison</h1>
+    </header>
+    <div id="formDiv">
+        <form id="drinkForm" action="/addDrink" method="post">
+            <div id="left">
+                <div class="nameDiv">
+                    <label class="nameLabel" for="name">Name: </label>
+                    <input class="nameField" type="text" name="name" />
+                </div>
+                <div id="coffeeTypeDiv">
+                    <label id="coffeeTypeLabel" for="coffeType">Coffee Type: </label>
+                    <select id="coffeeTypeField" name="coffeeType">
+                        <option value="pourOver">Pour Over</option>
+                        <option value="frenchPress">French Press</option>
+                        <option value="espresso">Espresso</option>
+                        <option value="coldBrew">Cold Brew</option>
+                    </select>
+                </div>
+                <div id="roastDiv">
+                    <label id="roastLabel" for="roast">Roast: </label>
+                    <select id="roastField" name="roast">
+                        <option value="blonde">Blonde</option>
+                        <option value="medium">Medium</option>
+                        <option value="french">French</option>
+                        <option value="decaf">Decaf</option>
+                    </select>
+                </div>
+                <div id="servingsDiv">
+                    <label id="servingsLabel" for="servings">Servings/Shots: </label>
+                    <input id="servingsField" type="number" name="servings" />
+                </div>
+            </div>
+            <div id="middleLine"></div>
+            <div id="right">
+                <div id="milkDiv">
+                    <label id="milkLabel" for="milk">Milk: </label>
+                    <select id="milkField" name="milk">
+                        <option value="none">None</option>
+                        <option value="skim">Skim</option>
+                        <option value="whole">Whole</option>
+                        <option value="almond">Almond</option>
+                        <option value="soy">Soy</option>
+                        <option value="coconut">Coconut</option>
+                        <option value="oat">Oat</option>
+                    </select>
+                </div>
+                <div id="sugarAndBtnDiv">
+                    <div id="sugarSelector">
+                        <label id="sugarLabel" for="sugar">Sugar?: </label>
+                        <input id="sugar" type="checkbox" value="false" name="sugar" />
+                    </div>
+                    <input type="submit" value="Place Order" id="placeOrder"></input>
+                    <section id="content"></section>
+                </div>
+                <div id="checkOrderDiv">
+                </div>
+            </div>
+        </form>
+        
+        <form id="checkOrderForm" action="/getOrders" method="get">
+            <h4>--OR--</h4>
+            <h4>Check Your Orders</h4>
+            <input type="submit" value="Check" id="checkOrder">
+        </form>
+    </div>
+</body>
+
+</html>

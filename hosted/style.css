@@ -1,0 +1,214 @@
+body {
+    background-color: #e4be9e;
+    display: flex;
+    flex-wrap: wrap;
+    height: 98vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+    color: #291b1e;
+}
+
+header {
+    font-family: 'Ephesis', cursive;
+    font-size: 26pt;
+    width: 95vw;
+    margin: -45px auto;
+    text-align: center;
+}
+
+#formDiv {
+    font-family: 'Merriweather', serif;
+    background-color: #D1CABE;
+    width: 60vw;
+    height: 55vw;
+    max-width: 90vh;
+    max-height: 85vh;
+    border-radius: 15px;
+    box-shadow: 7px 8px 8px 4px rgba(0, 0, 0, .2), 0 6px 20px 3px rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+#left select {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+
+#left input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+
+#right select {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+
+#right button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+
+#right input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+
+#drinkForm {
+    height: 90%;
+    display: grid;
+    grid-template-columns: 50.25% .5% 50.25%;
+    grid-template-rows: auto;
+    grid-row: 1 /span 2;
+    grid-column: 1 /span 2;
+}
+
+#content {
+    font-size: x-small;
+    max-height: 50px;
+    margin-top: 10px;
+}
+
+#checkOrderForm {
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #c7bfb2;
+    margin: 50px 25px 25px 25px;
+    height: 220px;
+}
+
+#checkOrderForm input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+
+#checkOrderForm h4 {
+    margin: 0px;
+}
+
+#left {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 25%);
+    width: 85%;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+#middleLine {
+    background-color: #291b1e;
+    margin-top: 10px;
+}
+
+#right {
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 25%);
+    width: 85%;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.nameDiv {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.nameField {
+    width: 75%;
+}
+
+#coffeeTypeDiv {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+#roastDiv {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+#servingsDiv {
+    grid-column: 1;
+    grid-row: 4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+#servingsField {
+    width: 35%;
+}
+
+#milkDiv {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+#sugarAndBtnDiv {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 45px;
+    margin-top: 45px;
+}
+
+#sugarSelector {
+    margin-bottom: 25px;
+}
+
+#sugar {
+    height: 20px;
+    width: 20px;
+}
+
+#checkOrderDiv {
+    grid-column: 1;
+    grid-row: 3 /span 4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 45px;
+}
