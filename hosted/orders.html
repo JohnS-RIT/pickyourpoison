@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Pick Your Poison</title>
+    <link rel="stylesheet" type="text/css" href="./style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ephesis&family=Merriweather:ital,wght@0,300;0,700;1,300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script src="bundle.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Pick Your Poison</h1>
+    </header>
+    <div id="orderDetails">
+        <form id="viewOrdersForm" action="getOrdersJSON" method="get">
+            <input type="submit" value="View Orders" id="viewOrdersJSON">
+            <p id="orderContent">Click Above to View Orders.</p>
+            <div id="drinkImages"></div>
+        </form>
+        <form id="goBackForm" action="/" method="get">
+            <input type="submit" value="Back to Place Orders" id="back">
+        </form>
+    </div>
+</body>
+</html>

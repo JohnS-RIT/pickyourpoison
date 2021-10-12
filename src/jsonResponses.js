@@ -1,5 +1,6 @@
-var customers = {};
+const customers = {};
 
+// Following 2 functions are for writing JSON for GET and HEAD respectively
 const respondJSON = (request, response, status, object) => {
   response.writeHead(status, { 'Content-Type': 'application/json' });
   response.write(JSON.stringify(object));
@@ -11,14 +12,24 @@ const respondJSONMeta = (request, response, status) => {
   response.end();
 };
 
-const getOrders = (request, response, body) => {
-    const responseJSON = {
-        customers,
-    };
+// Following 2 functions are for creating JSON for GET and HEAD respectively
+const getOrdersJSON = (request, response) => {
+  const responseJSON = {
+    customers,
+  };
 
-    return respondJSON(request, response, 200, responseJSON);
-}
+  let responseCode = 201;
 
+  if (customers === {}) {
+    responseCode = 200;
+  }
+
+  return respondJSON(request, response, responseCode, responseJSON);
+};
+
+const getOrdersJSONMeta = (request, response) => respondJSONMeta(request, response, 200);
+
+// Create JSON based on orderform input of user
 const addDrink = (request, response, body) => {
   const responseJSON = {
     message: 'All portions of order must be complete.',
@@ -29,13 +40,12 @@ const addDrink = (request, response, body) => {
     return respondJSON(request, response, 400, responseJSON);
   }
 
-  var responseCode = 201;
+  let responseCode = 201;
   responseJSON.message = 'Drink Created Successfully';
 
   if (customers[body.name]) {
-      responseCode = 204;
-  }
-  else {
+    responseCode = 204;
+  } else {
     customers[body.name] = {};
   }
 
@@ -46,11 +56,10 @@ const addDrink = (request, response, body) => {
   customers[body.name].milk = body.milk;
   customers[body.name].sugar = body.sugar;
 
-  console.log(customers);
-
   return respondJSON(request, response, responseCode, responseJSON);
 };
 
+// Following 2 functions deal with not real/not found pages by users for GET and HEAD respectively
 const notFound = (request, response) => {
   const responseJSON = {
     id: 'notFound',
@@ -66,5 +75,6 @@ module.exports = {
   addDrink,
   notFound,
   notFoundMeta,
-  getOrders,
+  getOrdersJSON,
+  getOrdersJSONMeta,
 };

@@ -1,0 +1,71 @@
+body {
+    background-color: #e4be9e;
+    display: flex;
+    flex-wrap: wrap;
+    height: 98vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+    color: #291b1e;
+}
+
+header {
+    font-family: 'Ephesis', cursive;
+    font-size: 26pt;
+    width: 95vw;
+    margin: -45px auto;
+    text-align: center;
+}
+
+#orderDetails {
+    font-family: 'Merriweather', serif;
+    background-color: #D1CABE;
+    width: 60vw;
+    height: auto;
+    min-height: 80vh;
+    max-width: 90vh;
+    border-radius: 15px;
+    box-shadow: 7px 8px 8px 4px rgba(0, 0, 0, .2), 0 6px 20px 3px rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#viewOrdersForm{
+    height: auto;
+    min-height: 52vh;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#drinkImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#goBackForm{
+    height: auto;
+    min-height: 20vh;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#orderContent {
+    text-align: center;
+    width: fit-content;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+    margin-top: 30px;
+}
